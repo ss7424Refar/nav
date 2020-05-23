@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-language" content="en" />
+    <meta name="generator" content="testlink" />
+    <meta name="author" content="TestLink Development Team" />
+    <meta name="copyright" content="TestLink Development Team" />
+    <meta name="robots" content="NOFOLLOW" />
+    <title>Magneto</title>
+</head>
+<link rel="stylesheet" href="layui/layui.css">
+<script type="text/javascript" src="layui/layui.js"></script>
+<style>
+    #flexBox {
+        position: absolute;
+        /* border: 1px solid #ccc; */
+        display: none;
+        left: 20px;
+        top: 70px;
+        background: white;
+        text-align: center;
+        z-index: 1000;
+        min-width: 120px;
+        /* border-radius: 5px; */
+    }
+
+    #flexBox li,
+    #Staff li,
+    #Attendance li,
+    #Training li,
+    #Statistics li {
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+
+    }
+    #Staff li,
+    #Attendance li,
+    #Training li,
+    #Statistics li{
+        padding-left: 7px;
+    }
+    .layui-nav {
+        position: relative;
+        z-index: 100;
+    }
+
+    #Staff,
+    #Attendance,
+    #Training,
+    #Statistics {
+        position: absolute;
+        left: 112px;
+        top: 0;
+        background: white;
+        text-align: center;
+        display: none;
+        width: 200px;
+        cursor: pointer;
+    }
+</style>
+
+    <div id="parentBox">
+        <div id="flexBox">
+            <ul id="Resource" style="padding:0 10px;">
+                <li>
+                    <img src="themes/default/images/Resource/4_statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="#" style="display:block;float:left;" target="mainframe">create</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/Resource/4_statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="#" style="display:block;float:left;" target="mainframe">MDzz</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/Resource/4_statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="#" style="display:block;float:left;" target="mainframe">aaa</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/Resource/4_statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="#" style="display:block;float:left;" target="mainframe">bbbb</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/Resource/4_statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="#" style="display:block;float:left;" target="mainframe">ccccc</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/Resource/4_statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="#" style="display:block;float:left;" target="mainframe">ddddd</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/Resource/4_statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="#" style="display:block;float:left;" target="mainframe">eeeee</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/Resource/4_statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="#" style="display:block;float:left;" target="mainframe">fffff</a>
+                </li>
+
+            </ul>
+            <ul id="QA" style="padding:0 10px;">
+                <li style="display:block">
+                    <img src="themes/default/Icons/testhome.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" style="display:block;float:left;" target="mainframe">Test Home</a>
+                </li>
+                <li style="display:block">
+                    <img src="themes/default/Icons/testtask.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Test Task</a>
+                </li>
+
+                <li style="display:block">
+                    <img src="themes/default/Icons/testspec.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Test
+                        Specification</a>
+                </li>
+                <li style="display:block">
+                    <img src="themes/default/Icons/testefficiency.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Test</a>
+                </li>
+                <li>
+                    <img src="themes/default/Icons/testefficiency2.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Test
+                        Efficiency</a>
+                </li>
+                <li>
+                    <img src="themes/default/Icons/testreport.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Test Report</a>
+                </li>
+                <li>
+                    <img src="themes/default/Icons/bugrepository.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Bug Reposity</a>
+                </li>
+
+            </ul>
+            <ul id="Automation" style="padding:0 10px;">
+                <li>
+                    <img src="themes/default/Icons/testtask.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Task Manager</a>
+                </li>
+                <li>
+                    <img src="themes/default/Icons/portchek.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Port Check</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/releasenote.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">ReleaseNote</a>
+                </li>
+                <li>
+                    <img src="themes/default/Icons/statistic.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">Statistics</a>
+                </li>
+            </ul>
+            <ul id="Admin" style="padding:0 10px;">
+
+                <li>
+                    <img src="themes/default/Icons/systemevent.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">System Events</a>
+                </li>
+                <li>
+                    <img src="themes/default/images/systemadmin.png" style="margin-top:12px;display:block;float:left;margin-right:5px;width: 16px;height: 16px;margin-left:2px;">
+                    <a href="target.html" target="mainframe" style="display:block;float:left;">System Admin</a>
+                </li>
+            </ul>
+        </div>
+        <iframe id="centerFrame" name="titlebar" class="centerFrame" frameborder="0" style="width:100%;height:70px;overflow:hidden;position:absolute;
+			z-index:10;" noresize="noresize" scrolling="no" src="navBar.html">
+        </iframe>
+        <iframe id="mainframe" name="mainframe" class="centerFrame" frameborder="0" style="width: 100%; height:calc( 100% - 70px);overflow: hidden;position:absolute;
+			left: 0;
+			top:70px;
+			z-index: 5;" noresize="noresize" scrolling="auto" src="mainPage.html">
+        </iframe>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/2.0.3/jquery.min.js" language="javascript"></script>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js" language="javascript"></script>
+    <script>
+        layui.use('element', function() {
+            var element = layui.element;
+        });
+
+        // $(function() {
+        //     var timerFlex = null;
+        //     $("#flexBox li a").on('click', function() {
+        //         $("#flexBox").hide();
+        //     })
+        //     $("#flexBox ul#QA").on('mouseleave', function() {
+        //         // var id = $(this).attr('id');
+        //         // if (id != 'Resource' && id != 'Staff' && id != 'Attendance' && id != 'Training' && id != 'Statistics') {
+        //         //     var that = $(this);
+        //         //     setTimeout(function(){
+        //         //         that.hide()
+        //         //     }, 300)
+        //         // }
+        //         timerFlex = setTimeout(function () {
+        //            $(this).hide();
+        //         }, 300);
+        //     })
+        //     $("#flexBox ul#QA").on('mouseenter', function() {
+        //         clearTimeout(timerFlex);
+        //         alert(1)
+        //         $(this).show()
+        //     })
+            // var html;
+            // $("#Resource li").on('mouseenter', function() {
+            //     html = $(this).find('a').html();
+            //     $("#" + html).show().siblings("ul").hide();
+            //     $(this).parent().show();
+            // })
+            // $("#Resource ul").on('mouseleave', function() {
+            //     $(this).hide();
+            //     $(this).parent().hide();
+            // })
+        // })
+
+    </script>
+
+</html>

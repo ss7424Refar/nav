@@ -1,0 +1,206 @@
+
+<!-- 新写样式 -->
+<style>
+    .navBox,
+    .navBar {
+        /* overflow: hidden; */
+        background: #0066cc;
+    }
+
+    .navBar {
+        border-bottom: 1px solid #fff;
+    }
+
+    .navBox {
+        padding: 5px;
+    }
+
+    .layui-nav {
+        background: #0066cc;
+        width: 62%;
+    }
+
+    .div.menu_bar {
+        background: #0066cc;
+    }
+
+    .layui-nav .layui-this:after,
+    .layui-nav-bar,
+    .layui-nav-tree .layui-nav-itemed:after {
+        background-color: #fff;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .dynabooklogo {
+        float: left;
+        width: 140px;
+        margin-top: 8px;
+        position: relative;
+        top: -7px;
+        height: 24px;
+    }
+
+    .lt {
+        float: left;
+    }
+
+    .rt {
+        float: right;
+    }
+
+    .layui-nav .layui-nav-item {
+        margin-right: 20px;
+    }
+
+    .layui-nav .layui-nav-child dd.layui-this a,
+    .layui-nav-child dd.layui-this {
+        background: transparent;
+        color: #0066cc;
+    }
+
+    .listnav {
+        border: 0;
+        background: transparent;
+    }
+
+    .selectfont {
+        color: #000;
+    }
+
+    .navbar-nav li a {
+        color: #fff;
+        font-size: 17px !important;
+        line-height:40px !important;
+        padding: 10px;
+        text-decoration: none !important;
+    }
+    .navbar-collapse.collapse{
+        height:40px !important;
+        position: relative;
+    }
+    .navbar-nav {
+        float:left !important;
+        position: absolute;
+        top:0;
+        left:140px;
+    }
+
+    .navbar-nav li {
+        margin-right: 20px;
+    }
+
+    nav ul li a:hover {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none !important;
+        height:40px !important;
+        line-height:40px !important;
+
+    }
+
+    .navbar-collapse {
+        padding-right: 0 !important;
+    }
+
+    div.rt{
+        width:500px !important;
+    }
+</style>
+
+<body style="min-width: 800px;">
+<div class="navBox">
+    <div style="width:100%;height:30px;overflow:hidden;" class="navBar ">
+        <!-- logo 图标 -->
+        <img alt="Company logo" title="logo" src="themes/default/images/magneto_4.png" class="dynabooklogo" />
+
+        <!-- 右边admin -->
+        <div class="rt" style="min-width: 300px;margin-top:4px;display: inline;position:relative;overflow: hidden;height:30px; ">
+            <span class="bold" style="color: white;position: absolute;right: 48px;top:1px;">admin</span>
+            <span style="position: absolute;right:2px">&nbsp;&nbsp;&nbsp;
+            <a href='#' target="mainframe" accesskey="i" tabindex="6">
+                <img src="themes/default/Icons/mysettings.png" style="width: 16px;height: 16px;margin-right:2px;" title="edit">
+             </a>
+            <a href="#" target="_parent" accesskey="q">
+            <img src="themes/default/Icons/logout.png" style="width: 16px;height: 16px" title="logout">
+            </a>
+            </span>
+            <div class="menu_title">
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <nav style="border: 0px;margin: 0px">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link QA" href="target.html" name="linktoparent" target="mainframe" style="font-size: 16px">QA</a>
+                    <a class="nav-link QA" href="target.html" name="linktoparent" target="mainframe" style="font-size: 16px">Automation</a>
+                    <a class="nav-link QA" href="target.html" name="linktoparent" target="mainframe" style="font-size: 16px">Resource</a>
+                    <!--<a class="nav-link Automation" href="#" name="linktoparent" target="mainframe" style="font-size: 16px;background-color: white;color: black">Automation</a>-->
+                    <a class="nav-link Admin" href="target.html" name="linktoparent" target="mainframe" style="font-size: 16px">Admin</a>
+                    <a class="nav-link Admin" href="target.html" name="linktoparent" target="mainframe" style="font-size: 16px">mdzz</a>
+                </li>
+
+            </ul>
+        </div>
+</div>
+</nav>
+</div>
+
+<div style="float:left; height: 100%;">
+    <a href="#" target="_parent"></a>
+
+</div>
+
+
+<span style="float:right;"></span>
+
+</body>
+
+</html>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/2.0.3/jquery.min.js" language="javascript"></script>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js" language="javascript"></script>
+<link rel="stylesheet" href="layui/layui.css">
+<script type="text/javascript" src="layui/layui.js"></script>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function() {
+        var element = layui.element;
+    });
+
+    var timer = null;
+
+    $("a[name='linktoparent']").mouseleave(function(){
+        var innerhtml = this.innerHTML
+        timer = setTimeout(function () {
+            $("#flexBox ul#" + innerhtml, window.parent.document).hide();
+        }, 300);
+    }).mouseenter(function(event) {
+        var oLeft = this.offsetLeft + 145;
+        clearTimeout(timer);
+        $("#flexBox ul[id='" + this.innerHTML +"']", window.parent.document).show();
+        $("#flexBox ul[id!='" + this.innerHTML +"']", window.parent.document).hide();
+        $('#flexBox', window.parent.document).css("display", "block");
+
+        $('#flexBox', window.parent.document).css("left", oLeft + 'px');
+
+    });
+
+    $('#flexBox ul', window.parent.document).mouseenter(function(event){
+        clearTimeout(timer);
+        var id = $(this).attr('id');
+        $("#flexBox ul[id='" + id  +"']", window.parent.document).show();
+        $("#flexBox ul[id!='" + id +"']", window.parent.document).hide();
+        $('#flexBox', window.parent.document).css("display", "block");
+    }).mouseleave(function(){
+        var id = $(this).attr('id');
+        timer = setTimeout(function () {
+            $('#flexBox ul#' + id, window.parent.document).hide();
+        }, 300);
+    })
+
+
+</script>
